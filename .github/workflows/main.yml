@@ -28,17 +28,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to EC2
-        uses: appleboy/scp-action@v0.1.4
-        with:
-          host: ${{ secrets.DEV_SSH_HOST }}
-          username: ${{ secrets.DEV_SSH_USERNAME }}
-          key: ${{ secrets.DEV_SSH_PRIVATE_KEY }}
-          source: 'dist'
-          target: /home/ubuntu/demo-testing/build
-          rm: true
-          strip_components: 1
-
       - name: Restart api server
         uses: appleboy/ssh-action@v0.1.10
         with:
