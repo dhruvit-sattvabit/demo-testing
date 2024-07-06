@@ -37,6 +37,5 @@ jobs:
           script: |
             cd demo-testing
             git pull --ff-only
-            npm i --no-save
             npm run start
             pm2 restart all
