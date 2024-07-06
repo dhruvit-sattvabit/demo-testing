@@ -1,0 +1,42 @@
+name: Dev Deploy idecore to ec2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CI: false
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node.js v20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Build
+        run: npm run build
+
+      - name: Restart api server
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.DEV_SSH_HOST }}
+          username: ${{ secrets.DEV_SSH_USERNAME }}
+          key: ${{ secrets.DEV_SSH_PRIVATE_KEY }}
+          script: |
+            cd demo-testing
+            git pull --ff-only
+            npm i --no-save
+            npm run start
+            pm2 restart all
