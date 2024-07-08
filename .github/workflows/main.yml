@@ -36,7 +36,7 @@ jobs:
           key: ${{ secrets.DEV_SSH_PRIVATE_KEY }}
           script: |
             cd demo-testing
-            git pull --ff-only
-            git reset --hard
+            git fetch origin
+            git reset --hard origin/main
             npm run start
             pm2 restart all
