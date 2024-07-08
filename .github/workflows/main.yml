@@ -37,7 +37,6 @@ jobs:
           script: |
               cd demo-testing
               git fetch origin
-              git reset --hard origin/main
-              pm2 stop all || true
+              git pull --ff-only origin main
               npm run start
               pm2 restart all
