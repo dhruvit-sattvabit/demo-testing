@@ -22,10 +22,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "prod:start": "pm2-runtime app.js"
-  }
-
-  "scripts": {
+    "prod:start": "pm2-runtime app.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
