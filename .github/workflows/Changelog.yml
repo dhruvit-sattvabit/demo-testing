@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-    - master
+    - prod
 
 jobs:
   build:
@@ -31,7 +31,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-          ref: master
+          ref: prod
 
       - name: Update Change log
         uses: heinrichreimer/github-changelog-generator-action@v2.1.1
