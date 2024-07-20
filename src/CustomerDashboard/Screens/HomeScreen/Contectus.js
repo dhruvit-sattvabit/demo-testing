@@ -44,7 +44,7 @@ export default function ContactUs() {
         <div className="space-y-4">
           <div className="text-[1.3rem] font-bold text-[#504238]">CONTACT US</div>
           <p className="text-l font-light text-[#504238]">
-            <a href="tel:+999-999-9999" className="no-underline text-[#504238]">Phone: 999-999-9999</a>
+            <a href="tel:+999-999-9999" className="no-underline text-[#504238]">Phone: +91 8469942118</a>
           </p>
 
           <div className="text-[1.3rem] font-bold text-[#504238]">FOLLOW US</div>

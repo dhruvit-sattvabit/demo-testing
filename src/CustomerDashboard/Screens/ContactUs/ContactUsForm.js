@@ -11,8 +11,8 @@ const ContactUsForm = () => {
             <div className="flex-1 mb-5 md:mb-0 md:mr-5">
                 <h2 className="text-xl md:text-3xl text-[#504238] mb-4 md:mb-5 text-left"><strong>Contact Details</strong></h2>
                 <p className='mx-0 m-2'><strong>Address:</strong> Surat, Gujarat</p>
-                <p className='mx-0 m-2'><strong>Email:</strong> contact@idecore.com</p>
-                <p className='mx-0 m-2'><strong>Phone:</strong> +123 456 7890</p>
+                <p className='mx-0 m-2'><strong>Email:</strong> info@dhruvit.in</p>
+                <p className='mx-0 m-2'><strong>Phone:</strong> +91 8469942118</p>
             </div>
             <div className="flex-1 bg-[#F6EFEA] p-5 md:p-10">
                 <form onSubmit={handleSubmit} className="flex flex-col max-w-md m-auto">
