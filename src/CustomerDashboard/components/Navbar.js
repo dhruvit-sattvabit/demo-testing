@@ -36,6 +36,8 @@ export default function Navbar() {
             <li><NavLink to="/"  className={`block py-2 pr-4 pl-3 text-white rounded hover:bg-[rgba(73,47,29,0.4)] md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 ${isActive('/') ? 'font-bold' : ''}`}>Home</NavLink></li>
             <li><NavLink to="/AboutUs"  className={`block py-2 pr-4 pl-3 text-white rounded hover:bg-[rgba(73,47,29,0.4)] md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 ${isActive('/AboutUs') ? 'font-bold' : ''}`} >About</NavLink></li>
             <li><NavLink to="/Store"  className={`block py-2 pr-4 pl-3 text-white rounded hover:bg-[rgba(73,47,29,0.4)] md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 ${isActive('/Store') ? 'font-bold' : ''}`} >Store</NavLink></li>
+            <li><NavLink to="/Contactus"  className={`block py-2 pr-4 pl-3 text-white rounded hover:bg-[rgba(73,47,29,0.4)] md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 ${isActive('/Contact Us') ? 'font-bold' : ''}`} >Contact Us</NavLink></li>
+            
           </ul>
           <div className="flex items-center right-0 justify-end space-x-4 gap-10 ">
             <button className="bg-none border-none outline-none " onClick={() => handleNavigation('/FavScreen')}>
